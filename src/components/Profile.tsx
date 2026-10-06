@@ -12,13 +12,15 @@ export default function Profile({ name, bio, image }: ProfileProps) {
       <Image
         src={image}
         alt={`${name} 프로필 사진`}
-        width={160}
-        height={160}
+        width={150}
+        height={150}
         priority
-        className="h-40 w-40 rounded-full object-cover ring-4 ring-emerald-100 dark:ring-emerald-900"
+        className="h-[150px] w-[150px] rounded-full object-cover shadow-xl shadow-rose-900/20 ring-4 ring-white/70 dark:shadow-black/50 dark:ring-white/15"
       />
-      <h1 className="mt-4 text-2xl font-bold">{name}</h1>
-      <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{bio}</p>
+      <h1 className="mt-6 text-2xl font-bold tracking-tight">{name}</h1>
+      <p className="mt-3 whitespace-pre-line text-[15px] leading-relaxed opacity-70">
+        {bio}
+      </p>
     </section>
   );
 }
